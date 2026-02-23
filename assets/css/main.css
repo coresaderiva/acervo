@@ -2065,7 +2065,7 @@ input, select, textarea {
 			text-align: center;
 		}
 
-			.image.thumb:after {
+			/* .image.thumb:after {
 				-moz-transition: opacity 0.2s ease-in-out;
 				-webkit-transition: opacity 0.2s ease-in-out;
 				-ms-transition: opacity 0.2s ease-in-out;
@@ -2087,7 +2087,7 @@ input, select, textarea {
 				text-decoration: none;
 				top: 50%;
 				white-space: nowrap;
-			}
+			} */
 
 			.image.thumb:hover:after {
 				opacity: 1.0;
@@ -2550,6 +2550,31 @@ input, select, textarea {
 			color: #b2b2b2 !important;
 			cursor: default;
 		}
+.button.secondary {
+    background-color: #1a2f3f;
+    border-color: #1a2f3f;
+    color: #ffffff !important;
+}
+
+.button.secondary:hover {
+    background-color: #2c4a63;
+    border-color: #2c4a63;
+    color: #ffffff !important;
+}
+
+.button.secondary:active {
+    background-color: #0f1e2a;
+    border-color: #0f1e2a;
+    color: #ffffff !important;
+}
+
+.button.secondary.disabled,
+.button.secondary:disabled {
+    background-color: #e7e7e7 !important;
+    border-color: #e7e7e7 !important;
+    color: #b2b2b2 !important;
+    cursor: default;
+}
 
 /* Work Item */
 
@@ -3219,3 +3244,276 @@ input, select, textarea {
 			}
 
 	}
+
+
+
+	.image-hero {
+				width: 100%;
+				height: 70vh;
+				min-height: 500px;
+				overflow: hidden;
+				position: relative;
+				margin-bottom: 2rem;
+			}
+
+			.image-hero img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				object-position: center;
+			}
+
+            .title {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+             }
+
+			.title h2 {
+				font-size: 2.5rem;
+				margin-bottom: 0.5rem;
+				color: #333;
+				text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+			}
+
+			.title p {
+				font-size: 1.2rem;
+				opacity: 0.9;
+				margin-bottom: 0;
+                color: #555;
+				text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+			}
+
+			.info-section {
+				padding: 2rem 2rem 4rem 2rem;
+				max-width: 800px;
+				margin: 0 auto;
+				background: white;
+			}
+
+			.info-header {
+				text-align: center;
+				margin-bottom: 3rem;
+				border-bottom: 2px solid #efefef;
+				padding-bottom: 2rem;
+			}
+
+			.info-header h3 {
+				font-size: 2rem;
+				color: #2c3e50;
+				margin-bottom: 0.5rem;
+			}
+
+			.info-header .reference {
+				color: #888;
+				font-size: 1.1rem;
+				font-family: "Courier New", monospace;
+				letter-spacing: 1px;
+			}
+
+			/* LISTA SIMPLES - SEM HOVER */
+			.info-list {
+				list-style: none;
+				padding: 0;
+				margin: 0 0 2rem 0;
+			}
+
+			.info-list li {
+				border-bottom: 1px solid #efefef;
+				padding: 1rem 0;
+				display: flex;
+				align-items: center;
+			}
+
+			.info-list .info-label {
+				min-width: 140px;
+				font-weight: 600;
+				color: #2c3e50;
+				font-size: 1.1rem;
+				display: flex;
+				align-items: center;
+			}
+
+			.info-list .info-label i {
+				margin-right: 10px;
+				color: #49bf9d;
+				width: 20px;
+				text-align: center;
+			}
+
+			.info-list .info-value {
+				color: #555;
+				font-size: 1.1rem;
+				flex: 1;
+				padding-left: 1rem;
+				border-left: 2px solid #49bf9d;
+			}
+
+			/* DESCRIÇÃO SIMPLES */
+			.description-box {
+				background: #f9f9f9;
+				padding: 2rem;
+				border-radius: 5px;
+				margin: 2rem 0;
+				border-left: 5px solid #49bf9d;
+			}
+
+			.description-box h4 {
+				color: #2c3e50;
+				margin-bottom: 1rem;
+				font-size: 1.3rem;
+			}
+
+			.description-box p {
+				margin-bottom: 0;
+				line-height: 1.8;
+				color: #555;
+			}
+
+			/* TAGS SIMPLES - SEM HOVER */
+			.tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				margin: 2rem 0;
+			}
+
+			.tag {
+				background: #49bf9d;
+				color: white;
+				padding: 0.3rem 1rem;
+				border-radius: 20px;
+				font-size: 0.9rem;
+			}
+
+			/* AÇÕES */
+			.info-actions {
+				display: flex;
+				gap: 1rem;
+				margin-top: 3rem;
+				justify-content: center;
+			}
+
+			.info-actions .button {
+				min-width: 150px;
+			}
+
+			/* NAVEGAÇÃO SIMPLES - SEM HOVER */
+			.navigation {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 3rem;
+				padding-top: 2rem;
+				border-top: 2px solid #efefef;
+			}
+
+			.nav-link {
+				color: #49bf9d;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+			}
+
+			/* RESPONSIVIDADE */
+			@media (max-width: 768px) {
+				.image-hero {
+					height: 50vh;
+					min-height: 300px;
+				}
+				.image-hero .overlay {
+					padding: 1.5rem;
+				}
+				.image-hero .overlay h2 {
+					font-size: 1.8rem;
+				}
+				.info-section {
+					padding: 1.5rem;
+				}
+				.info-list li {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 0.3rem;
+				}
+				.info-list .info-label {
+					min-width: auto;
+				}
+				.info-list .info-value {
+					padding-left: 1.5rem;
+					width: 100%;
+				}
+				.info-actions {
+					flex-direction: column;
+				}
+				.info-actions .button {
+					width: 100%;
+				}
+				.navigation {
+					flex-direction: column;
+					gap: 1rem;
+					align-items: center;
+				}
+			}
+
+			/* HISTÓRIA DE VIDA */
+			.history-box {
+				background: #f9f9f9;
+				padding: 2rem;
+				border-radius: 5px;
+				margin: 2rem auto;
+				border-left: 5px solid #1a2f3f;
+				max-width: 600px;
+			}
+
+			.history-box h4 {
+				color: #2c3e50;
+				margin-bottom: 1.5rem;
+				font-size: 1.3rem;
+				text-align: center;
+			}
+
+			.history-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			.history-list li {
+				display: flex;
+				align-items: baseline;
+				padding: 0.8rem 0;
+				border-bottom: 1px dashed #ddd;
+			}
+
+			.history-list li:last-child {
+				border-bottom: none;
+			}
+
+			.history-date {
+				min-width: 100px;
+				font-weight: 600;
+				color: #1a2f3f;
+				font-family: "Courier New", monospace;
+				font-size: 0.95rem;
+			}
+
+			.history-event {
+				color: #555;
+				font-size: 1rem;
+				padding-left: 1rem;
+				border-left: 2px solid #1a2f3f;
+				flex: 1;
+			}
+
+			@media (max-width: 768px) {
+				.history-list li {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 0.3rem;
+				}
+				
+				.history-event {
+					padding-left: 0;
+					border-left: none;
+				}
+			}
